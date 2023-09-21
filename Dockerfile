@@ -1,4 +1,4 @@
-FROM nodered/node-red:latest
+FROM nodered/node-red:3.0.2
 USER root
 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
@@ -15,7 +15,7 @@ RUN set -x \
 
 # Puppeteer v13.5.0 works with Chromium 100.
 RUN yarn add puppeteer@13.5.0
-RUN yarn add playwright-core
+RUN yarn add playwright-core@1.32.3
 
 USER node-red
 

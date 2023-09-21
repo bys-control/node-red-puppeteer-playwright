@@ -1,6 +1,6 @@
 # node-red-puppeteer-playwright
 
-Agrego chromium, puppeteer y Playwright a la imagen Docker de node-red:latest
+Agrego chromium, puppeteer@13.5.0 y Playwright a la imagen Docker de node-red:latest
 
 Para utilizar las librerías desde los nodos hay que modificar el archivo `settings.js` y agregar en `functionGlobalContext`
 
