@@ -1,4 +1,4 @@
-FROM nodered/node-red:3.0.2
+FROM nodered/node-red:4.0.5-22
 USER root
 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
