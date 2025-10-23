@@ -1,0 +1,19 @@
+################################################################################
+# Node-RED Stack or Compose
+################################################################################
+# docker stack deploy node-red --compose-file docker-compose-node-red.yml
+# docker-compose -f docker-compose-node-red.yml -p myNoderedProject up
+################################################################################
+services:
+  node-red:
+    restart: unless-stopped
+    image: bys-control/node-red:4.0.5-22
+    build: .
+    ports:
+      - 1880
+    volumes:
+      - ./data:/data
+    cap_add:
+      - SYS_ADMIN
+    environment:
+      - TZ=America/Argentina/Buenos_Aires
